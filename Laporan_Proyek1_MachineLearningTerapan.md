@@ -115,12 +115,13 @@ Kekurangan algoritma Adaptive Boosting, yaitu:
 MSE adalah metrik evaluasi yang digunakan untuk mengukur sejauh mana perbedaan antara nilai yang diprediksi oleh model dan nilai sebenarnya. Dalam konteks prediksi harga mobil bekas, MSE mengukur rata-rata dari kuadrat selisih antara harga yang diprediksi dan harga sebenarnya.
 
 Formula MSE adalah sebagai berikut.
-MSE = \frac{1}{n} \sum_{i=1}^{n} (Y_i - \hat{Y}_i)^2
+
+$$MSE = \frac{1}{n} \sum_{i=1}^{n} (Y_i - \hat{Y}_i)^2$$
 
 Keterangan:
 - n adalah jumlah sampel dalam dataset.
-- Y_i adalah harga mobil bekas yang sebenarnya.
-- \hat{Y}_i adalah harga mobil bekas yang diprediksi oleh model.
+- $$Y_i$$ adalah harga mobil bekas yang sebenarnya.
+- $$\hat{Y}_i$$ adalah harga mobil bekas yang diprediksi oleh model.
 
 Cara Kerjanya:
 - MSE menghitung rata-rata dari kuadrat perbedaan antara nilai prediksi dan nilai sebenarnya.
