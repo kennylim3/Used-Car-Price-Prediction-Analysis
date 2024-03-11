@@ -14,10 +14,13 @@ mereka harus membawa mobil mereka ke bengkel perusahaan masing-masing atau membu
 
 ### Goals
 - Meningkatkan akurasi prediksi harga mobil bekas dengan menggunakan model machine learning.
+
 Dengan model machine learning yang dapat memberikan prediksi harga yang lebih akurat, diharapkan dapat memberikan pemahaman yang lebih baik tentang nilai mobil bekas, mengurangi ketidakpastian, dan meningkatkan kepercayaan pelanggan.
 - Memberikan panduan harga yang lebih transparan dan akurat kepada pembeli dan penjual.
+
 Model machine learning diharapkan dapat memberikan panduan harga yang lebih jelas dan terukur kepada pembeli dan penjual, membantu mereka membuat keputusan yang lebih informasional.
 - Meningkatkan efisiensi transaksi dan kepuasan pelanggan di pasar mobil bekas.
+
 Dengan menggunakan model machine learning untuk menyederhanakan dan mempercepat proses transaksi, diharapkan dapat meningkatkan efisiensi dan memberikan pengalaman pelanggan yang lebih baik di pasar mobil bekas.
 
 ### Solution Statements
