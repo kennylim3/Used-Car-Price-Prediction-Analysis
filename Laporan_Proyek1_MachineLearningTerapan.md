@@ -78,6 +78,7 @@ Kelebihan algoritma K-Nearest Neighbor, yaitu:
 - Sederhana dan Intuitif: Konsepnya mudah dipahami dan diimplementasikan.
 - Non-Parametrik: KNN tidak membuat asumsi terhadap distribusi data, sehingga dapat menangani data yang kompleks dan tidak terstruktur.
 - Cocok untuk Data Multiclass: KNN dapat digunakan untuk masalah klasifikasi multiclass tanpa perlu penyesuaian khusus.
+
 Kekurangan algoritma K-Nearest Neighbor, yaitu:
 - Komputasi yang Mahal: Proses pengambilan keputusan memerlukan perhitungan jarak ke setiap titik data, yang bisa menjadi mahal untuk dataset besar.
 - Sensitif terhadap Outlier: Outlier dapat memiliki pengaruh besar pada hasil prediksi.
@@ -89,6 +90,7 @@ Kelebihan algoritma Random Forest, yaitu:
 - Ketangguhan terhadap Overfitting: Random Forest memiliki kemampuan yang baik untuk mengatasi overfitting karena membangun banyak pohon yang beragam.
 - Mampu Menangani Data yang Tidak Seimbang: Random Forest dapat memberikan hasil yang baik pada dataset yang tidak seimbang.
 - Fitur Importance: Memberikan informasi tentang pentingnya setiap fitur dalam membuat prediksi.
+
 Kekurangan algoritma Random Forest, yaitu:
 - Sulit diinterpretasi: Random Forest lebih sulit diinterpretasi daripada model linear sederhana.
 - Komputasi yang Mahal: Melibatkan pelatihan sejumlah besar pohon, yang dapat memakan waktu dan sumber daya komputasi.
@@ -100,6 +102,7 @@ Kelebihan algoritma Adaptive Boosting, yaitu:
 - Ketangguhan terhadap Overfitting: Seperti Random Forest, AdaBoost cenderung memiliki ketangguhan terhadap overfitting.
 - Mampu Menangani Data yang Tidak Seimbang: Cocok untuk menangani masalah klasifikasi dengan kelas minoritas.
 - Menggunakan Model Lemah: Dapat menggunakan model lemah (misalnya, decision stump) dan meningkatkan performanya.
+
 Kekurangan algoritma Adaptive Boosting, yaitu:
 - Sensitif terhadap Noise: Rentan terhadap noise dan outlier dalam data.
 - Hyperparameter perlu diperhatikan: Sensitif terhadap konfigurasi hyperparameter yang tidak optimal.
