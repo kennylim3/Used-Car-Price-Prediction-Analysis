@@ -6,19 +6,19 @@ Industri otomotif terus berkembang, dan dalam beberapa tahun terakhir, pasar mob
 untuk membeli mobil bekas karena faktor ekonomi dan nilai investasi yang lebih baik. Saat ini, jika konsumen ingin menjual mobil mereka, maka 
 mereka harus membawa mobil mereka ke bengkel perusahaan masing-masing atau membuat janji untuk mendapatkan perkiraan harga. Proses ini melibatkan banyak waktu dan sumber daya. Dengan teknologi machine learning, kita dapat membuat model untuk memprediksi harga mobil bekas berdasarkan sejumlah fitur tertentu. Model machine learning yang dapat memprediksi harga mobil bekas tentunya akan berdampak pada beberapa keuntungan, seperti efisiensi dalam keputusan, peningkatan pengalaman pembeli, dan optimalisasi penjualan.
 
-**Referensi**: Gajera, P., Gondaliya, A., & Kavathiya, J. (2021). Old car price prediction with machine learning. Int. Res. J. Mod. Eng. Technol. Sci, 3, 284-290.
-
-
 ## Business Understanding
 ### Problem Statements
-- Harga mobil bekas sangat bervariasi dan sulit diprediksi dengan akurasi tinggi.
-- Pembeli sering mengalami kesulitan dalam menilai apakah harga yang ditawarkan adil atau tidak.
-- Penjual kesulitan menentukan harga yang bersaing untuk mobil bekas mereka.
+- Bagaimana kita dapat meningkatkan akurasi prediksi harga mobil bekas?
+- Apakah mungkin memberikan panduan harga yang lebih jelas dan akurat kepada pembeli dan penjual mobil bekas?
+- Bagaimana cara meningkatkan efisiensi transaksi dan kepuasan pelanggan di pasar mobil bekas?
 
 ### Goals
 - Meningkatkan akurasi prediksi harga mobil bekas dengan menggunakan model machine learning.
+Dengan model machine learning yang dapat memberikan prediksi harga yang lebih akurat, diharapkan dapat memberikan pemahaman yang lebih baik tentang nilai mobil bekas, mengurangi ketidakpastian, dan meningkatkan kepercayaan pelanggan.
 - Memberikan panduan harga yang lebih transparan dan akurat kepada pembeli dan penjual.
+Model machine learning diharapkan dapat memberikan panduan harga yang lebih jelas dan terukur kepada pembeli dan penjual, membantu mereka membuat keputusan yang lebih informasional.
 - Meningkatkan efisiensi transaksi dan kepuasan pelanggan di pasar mobil bekas.
+Dengan menggunakan model machine learning untuk menyederhanakan dan mempercepat proses transaksi, diharapkan dapat meningkatkan efisiensi dan memberikan pengalaman pelanggan yang lebih baik di pasar mobil bekas.
 
 ### Solution Statements
 - Menggunakan beberapa algoritma, antara lain K-Nearest Neighbor, Random Forest, dan Adaptive Boosting.
@@ -58,13 +58,13 @@ Jaiput dan Kolkata memiliki rata-rata harga terendah.
 ## Data Preparation
 Beberapa hal yang dilakukan dalam tahap preparation adalah sebagai berikut.
 - Encoding Fitur Kategori
-Proses encoding fitur kategori dilakukan menggunakan teknik one-hot encoding. Proses ini dilakukan untuk mengonversi fitur kategorikal menjadi bentuk numerik. Encoding membantu mengatasi masalah representasi fitur kategorikal dalam bentuk yang dapat dipahami oleh model.
+Proses encoding fitur kategori dilakukan dengan teknik one-hot encoding menggunakan OneHotEncoder. Proses ini dilakukan untuk mengonversi fitur kategorikal menjadi bentuk numerik. Encoding membantu mengatasi masalah representasi fitur kategorikal dalam bentuk yang dapat dipahami oleh model.
 - Reduksi Dimensi dengan PCA
 Proses PCA (Principal Component Analysis) dilakukan untuk mereduksi dimensi fitur. Hal ini akan mempercepat waktu pelatihan model dengan mengurangi jumlah fitur, mengatasi multikolinearitas, dan memperbaiki masalah overfitting pada model.
 - Train Test Split
-Proses ini dilakukan dengan membagi dataset menjadi data latih dan data uji menggunakan train_test_split dari scikit-learn. 
+Proses ini dilakukan dengan membagi dataset menjadi data latih dan data uji menggunakan train_test_split dari scikit-learn. Mempertimbangkan ukuran dataset dalam proyek ini, train test split dilakukan dengan rasio train dan test sebanyak 80:20.
 - Standardisasi
-Proses standardisasi menyelaraskan skala fitur dengan mengurangkan mean dan membagi oleh deviasi standar. Standardisasi akan Memastikan semua fitur memiliki skala yang serupa, sehingga tidak ada fitur yang mendominasi yang lain.
+Proses standardisasi menyelaraskan skala fitur dengan mengurangkan mean dan membagi oleh deviasi standar. Standardisasi akan Memastikan semua fitur memiliki skala yang serupa, sehingga tidak ada fitur yang mendominasi yang lain. Proses dilakukan dengan menggunakan StandardScaler.
 
 ## Modeling
 Untuk pembuatan model, beberapa algoritma yang digunakan adalah K-Nearest Neighbor (dengan 10 jumlah tetangga), Random Forest (dengan n_estimators = 50, max_depth = 16, random_state=55, n_jobs=-1), dan Adaptive Boosting (dengan learning_rate=0.05, random_state=55).
@@ -108,7 +108,15 @@ Kekurangan algoritma Adaptive Boosting, yaitu:
 **Metrik Evaluasi yang Digunakan: Mean Squared Error (MSE)**
 MSE adalah metrik evaluasi yang digunakan untuk mengukur sejauh mana perbedaan antara nilai yang diprediksi oleh model dan nilai sebenarnya. Dalam konteks prediksi harga mobil bekas, MSE mengukur rata-rata dari kuadrat selisih antara harga yang diprediksi dan harga sebenarnya.
 
-Formula MSE dan Cara Kerjanya:
+Formula MSE adalah sebagai berikut.
+MSE = \frac{1}{n} \sum_{i=1}^{n} (Y_i - \hat{Y}_i)^2
+
+Keterangan:
+- n adalah jumlah sampel dalam dataset.
+- Y_i adalah harga mobil bekas yang sebenarnya.
+- \hat{Y}_i adalah harga mobil bekas yang diprediksi oleh model.
+
+Cara Kerjanya:
 - MSE menghitung rata-rata dari kuadrat perbedaan antara nilai prediksi dan nilai sebenarnya.
 - Semakin kecil MSE, semakin dekat prediksi dengan nilai sebenarnya.
 - MSE memberikan "hukuman" lebih besar untuk perbedaan yang besar, membuatnya cocok untuk kasus prediksi harga.
