@@ -120,8 +120,8 @@ $$MSE = \frac{1}{n} \sum_{i=1}^{n} (Y_i - \hat{Y}_i)^2$$
 
 Keterangan:
 - n adalah jumlah sampel dalam dataset.
-- $$Y_i$$ adalah harga mobil bekas yang sebenarnya.
-- $$\hat{Y}_i$$ adalah harga mobil bekas yang diprediksi oleh model.
+- $Y_i$ adalah harga mobil bekas yang sebenarnya.
+- $\hat{Y}_i$ adalah harga mobil bekas yang diprediksi oleh model.
 
 Cara Kerjanya:
 - MSE menghitung rata-rata dari kuadrat perbedaan antara nilai prediksi dan nilai sebenarnya.
